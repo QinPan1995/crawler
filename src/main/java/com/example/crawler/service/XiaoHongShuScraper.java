@@ -24,8 +24,7 @@ public class XiaoHongShuScraper {
     @Autowired
     private PlaywrightManager playwrightManager;
 
-    public List<Map<String, String>> scrapeNotes(String keyword, int maxPages) {
-        List<Map<String, String>> notes = new ArrayList<>();
+    public List<Map<String, String>> scrapeNotes(String keyword) {
         BrowserContext context = playwrightManager.getContextWithSession();
         Page page = context.newPage();
 

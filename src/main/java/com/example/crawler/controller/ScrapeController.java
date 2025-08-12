@@ -47,9 +47,8 @@ public class ScrapeController {
     }
     @PostMapping("/notes")
     public List<Map<String, String>> scrapeNotes(
-            @RequestParam String keyword,
-            @RequestParam(defaultValue = "1") int pages
+            @RequestParam String keyword
     ) {
-        return scraper.scrapeNotes(keyword, pages);
+        return scraper.scrapeNotes(keyword);
     }
 }
