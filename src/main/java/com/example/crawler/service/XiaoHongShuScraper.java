@@ -37,27 +37,6 @@ public class XiaoHongShuScraper {
         int stableCount = 0;
         int maxStableCount = 3;
 
-//        List<ElementHandle> items = page.querySelectorAll("section");
-//        for (ElementHandle item : items) {
-//            try {
-//
-//                ElementHandle titleEl = item.querySelector(".title");
-//                ElementHandle nameEl = item.querySelector(".name");
-//                ElementHandle timeEl = item.querySelector(".time");
-//                String title = titleEl == null ? "" : titleEl.innerText();
-//                String name = nameEl == null ? "" : nameEl.innerText();
-//                String time = timeEl == null ? "" : timeEl.innerText();
-//
-//                Map<String, String> note = new HashMap<>();
-//                note.put("title", title);
-//                note.put("name", name);
-//                note.put("time", time);
-//                notes.add(note);
-//            } catch (Exception e) {
-//                System.err.println("⚠️ 解析单条数据失败: " + e.getMessage());
-//            }
-//        }
-
         Locator sections = page.locator("section.note-item");
         while (stableCount < maxStableCount) {
             int count = sections.count();
